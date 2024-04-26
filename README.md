@@ -26,4 +26,4 @@ STEP 2 - Show the Sequence to the User with Animations and Sounds
 
 You should end up with an effect like this:
 
-3. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
+9. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.

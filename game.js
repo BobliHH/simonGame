@@ -15,10 +15,19 @@ function nextSequence() {
   audio.play();
 }
 
-// let buttonId = $("#" + randomChosenColour);
-// $(buttonId).click(function () {
-//   $(this).fadeIn(100).fadeOut(100).fadeIn(100);
+// $(".btn").on("click", function () {
+//   alert("Handler for `click` called.");
 // });
+
+$(".btn").click(function () {
+  alert("The button was clicked.");
+});
+
+// let buttonId = $("#" + randomChosenColour);
+// $("button").click(function () {
+//   alert("The button was clicked.");
+// });
+
 
 // function playSound(name) {
 //   let audio = new Audio("sounds/" + name + ".mp3");

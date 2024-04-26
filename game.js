@@ -21,13 +21,14 @@ function nextSequence() {
 
 $(".btn").click(function () {
   alert("The button was clicked.");
+  let userChosenColour = this.id;
+  console.log(userChosenColour);
 });
 
 // let buttonId = $("#" + randomChosenColour);
 // $("button").click(function () {
 //   alert("The button was clicked.");
 // });
-
 
 // function playSound(name) {
 //   let audio = new Audio("sounds/" + name + ".mp3");

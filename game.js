@@ -12,8 +12,7 @@ function nextSequence() {
   $("#" + randomChosenColour)
     .fadeOut(100)
     .fadeIn(100);
-  let audio = new Audio("sounds/" + randomChosenColour + ".mp3");
-  audio.play();
+  playSound(randomChosenColour);
 }
 
 // $(".btn").on("click", function () {
@@ -26,9 +25,13 @@ $(".btn").click(function () {
   console.log(userChosenColour);
   userClickedPattern.push(userChosenColour);
   console.log(userClickedPattern);
-  let audio = new Audio("sounds/" + userChosenColour + ".mp3");
-  audio.play();
+  playSound(userChosenColour);
 });
+
+function playSound(name) {
+  let audio = new Audio("sounds/" + name + ".mp3");
+  audio.play();
+}
 
 // let buttonId = $("#" + randomChosenColour);
 // $("button").click(function () {

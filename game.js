@@ -26,6 +26,8 @@ $(".btn").click(function () {
   console.log(userChosenColour);
   userClickedPattern.push(userChosenColour);
   console.log(userClickedPattern);
+  let audio = new Audio("sounds/" + userChosenColour + ".mp3");
+  audio.play();
 });
 
 // let buttonId = $("#" + randomChosenColour);

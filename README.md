@@ -42,3 +42,12 @@ Step 3 - Check Which Button is Pressed
 13. Add the contents of the variable userChosenColour created in step 2 to the end of this new userClickedPattern
 
 At this stage, if you log the userClickedPattern you should be able to build up an array in the console by clicking on different buttons.
+
+Step 4 - Add Sounds to Button Clicks
+14. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played. e.g if the Green button is clicked, then green.mp3 should be played.
+
+15. Create a new function called playSound() that takes a single input parameter called name.
+
+16. Take the code we used to play sound in the nextSequence() function and move it to playSound().
+
+17. Refactor the code in playSound() so that it will work for both playing sound in nextSequence() and when the user clicks a button.

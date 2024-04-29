@@ -28,6 +28,8 @@ You should end up with an effect like this:
 
 9. Use Google/Stackoverflow to figure out how you can use Javascript to play the sound for the button colour selected in step 1.
 
+////////////////////////////////////////////////////////////////
+
 Step 3 - Check Which Button is Pressed
 
 10. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
@@ -42,6 +44,8 @@ Step 3 - Check Which Button is Pressed
 
 At this stage, if you log the userClickedPattern you should be able to build up an array in the console by clicking on different buttons.
 
+////////////////////////////////////////////////////////////////
+
 Step 4 - Add Sounds to Button Clicks 14. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played. e.g if the Green button is clicked, then green.mp3 should be played.
 
 15. Create a new function called playSound() that takes a single input parameter called name.
@@ -49,6 +53,8 @@ Step 4 - Add Sounds to Button Clicks 14. In the same way we played sound in next
 16. Take the code we used to play sound in the nextSequence() function and move it to playSound().
 
 17. Refactor the code in playSound() so that it will work for both playing sound in nextSequence() and when the user clicks a button.
+
+////////////////////////////////////////////////////////////////
 
 Step 5 - Add Animations to User Clicks 18. Create a new function called animatePress(), it should take a single input parameter called currentColour.
 
@@ -58,4 +64,20 @@ Step 5 - Add Animations to User Clicks 18. Create a new function called animateP
 
 21. use Google/Stackoverflow to figure out how you can use Javascript to remove the pressed class after a 100 milliseconds.
 
-Once complete, you will get this effect when you click on any button.
+////////////////////////////////////////////////////////////////
+
+Step 6 - Start the Game
+22. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
+
+You'll need a way to keep track of whether if the game has started or not, so you only call nextSequence() on the first keypress.
+
+23. Create a new variable called level and start at level 0.
+
+24. The h1 title starts out saying "Press A Key to Start", when the game has started, change this to say "Level 0".
+
+25. Inside nextSequence(), increase the level by 1 every time nextSequence() is called.
+
+26. Inside nextSequence(), update the h1 with this change in the value of level.
+
+////////////////////////////////////////////////////////////////
+

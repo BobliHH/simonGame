@@ -36,18 +36,26 @@ Step 3 - Check Which Button is Pressed
 
 --> So if the Green button was clicked, userChosenColour will equal its id which is "green".
 
-
 12. At the top of the game.js file, create a new empty array with the name userClickedPattern.
 
 13. Add the contents of the variable userChosenColour created in step 2 to the end of this new userClickedPattern
 
 At this stage, if you log the userClickedPattern you should be able to build up an array in the console by clicking on different buttons.
 
-Step 4 - Add Sounds to Button Clicks
-14. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played. e.g if the Green button is clicked, then green.mp3 should be played.
+Step 4 - Add Sounds to Button Clicks 14. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played. e.g if the Green button is clicked, then green.mp3 should be played.
 
 15. Create a new function called playSound() that takes a single input parameter called name.
 
 16. Take the code we used to play sound in the nextSequence() function and move it to playSound().
 
 17. Refactor the code in playSound() so that it will work for both playing sound in nextSequence() and when the user clicks a button.
+
+Step 5 - Add Animations to User Clicks 18. Create a new function called animatePress(), it should take a single input parameter called currentColour.
+
+19. Take a look inside the styles.css file, you can see there is a class called "pressed", it will add a box shadow and changes the background colour to grey.
+
+20. Use jQuery to add this pressed class to the button that gets clicked inside animatePress().
+
+21. use Google/Stackoverflow to figure out how you can use Javascript to remove the pressed class after a 100 milliseconds.
+
+Once complete, you will get this effect when you click on any button.

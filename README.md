@@ -1,6 +1,29 @@
 # simonGame
 
-STEP 1 - Create A New Pattern
+Step 1 - Add Javascript and jQuery
+Our game logic will be created inside an external Javascript file.
+
+1. Create a new file called game.js
+
+2. Link to this new external JS file from your index.html
+
+3. Add an alert to game.js and test that the alert gets triggered when you load up index.html in Chrome.
+
+
+Once, you've confirmed that game.js is correctly linked, you can delete or comment out the alert.
+
+
+
+4. Add jQuery to your website and test that it's successfully loaded by opening Chrome developer tools and typing $("h1")
+
+If successful, you should get something like this printed:
+
+
+If jQuery is not added, you will get this instead:
+
+   ////////////////////////////////////////////////////////////////
+
+STEP 2 - Create A New Pattern
 
 1. Inside game.js create a new function called nextSequence()
 
@@ -18,7 +41,7 @@ You can use the Chrome console to verify that your code creates random numbers b
 
    ////////////////////////////////////////////////////////////////
 
-STEP 2 - Show the Sequence to the User with Animations and Sounds
+STEP 3 - Show the Sequence to the User with Animations and Sounds
 
 7. Use jQuery to select the button with the same id as the randomChosenColour
 
@@ -30,7 +53,7 @@ You should end up with an effect like this:
 
 ////////////////////////////////////////////////////////////////
 
-Step 3 - Check Which Button is Pressed
+Step 4 - Check Which Button is Pressed
 
 10. Use jQuery to detect when any of the buttons are clicked and trigger a handler function.
 
@@ -46,7 +69,7 @@ At this stage, if you log the userClickedPattern you should be able to build up 
 
 ////////////////////////////////////////////////////////////////
 
-Step 4 - Add Sounds to Button Clicks 14. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played. e.g if the Green button is clicked, then green.mp3 should be played.
+Step 5 - Add Sounds to Button Clicks 14. In the same way we played sound in nextSequence() , when a user clicks on a button, the corresponding sound should be played. e.g if the Green button is clicked, then green.mp3 should be played.
 
 15. Create a new function called playSound() that takes a single input parameter called name.
 
@@ -56,7 +79,7 @@ Step 4 - Add Sounds to Button Clicks 14. In the same way we played sound in next
 
 ////////////////////////////////////////////////////////////////
 
-Step 5 - Add Animations to User Clicks 18. Create a new function called animatePress(), it should take a single input parameter called currentColour.
+Step 6 - Add Animations to User Clicks 18. Create a new function called animatePress(), it should take a single input parameter called currentColour.
 
 19. Take a look inside the styles.css file, you can see there is a class called "pressed", it will add a box shadow and changes the background colour to grey.
 
@@ -66,7 +89,7 @@ Step 5 - Add Animations to User Clicks 18. Create a new function called animateP
 
 ////////////////////////////////////////////////////////////////
 
-Step 6 - Start the Game 22. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
+Step 7 - Start the Game 22. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
 
 You'll need a way to keep track of whether if the game has started or not, so you only call nextSequence() on the first keypress.
 
@@ -80,7 +103,7 @@ You'll need a way to keep track of whether if the game has started or not, so yo
 
 ////////////////////////////////////////////////////////////////
 
-Step 7 - Check the User's Answer Against the Game Sequence8
+Step 8 - Check the User's Answer Against the Game Sequence8
 At this point, it might be worth reviewing how the Simon game works.
 
 Firstly, the game shows the first colour in the sequence (blue). The user clicks on the blue button.
@@ -113,7 +136,7 @@ In the next few challenges, we'll address what happens when the user get's the p
 
 ////////////////////////////////////////////////////////////////
 
-Step 8 - Game Over 33. In the sounds folder, there is a sound called wrong.mp3, play this sound if the user got one of the answers wrong.
+Step 9 - Game Over 33. In the sounds folder, there is a sound called wrong.mp3, play this sound if the user got one of the answers wrong.
 
 34. In the styles.css file, there is a class called "game-over", apply this class to the body of the website when the user gets one of the answers wrong and then remove it after 200 milliseconds.
 
@@ -123,7 +146,7 @@ All going well, you should end up with a flash effect:
 
 ////////////////////////////////////////////////////////////////
 
-Step 9 - Restart the Game 36. Create a new function called startOver().
+Step 10 - Restart the Game 36. Create a new function called startOver().
 
 37. Call startOver() if the user gets the sequence wrong.
 

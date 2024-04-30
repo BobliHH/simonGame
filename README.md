@@ -66,8 +66,7 @@ Step 5 - Add Animations to User Clicks 18. Create a new function called animateP
 
 ////////////////////////////////////////////////////////////////
 
-Step 6 - Start the Game
-22. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
+Step 6 - Start the Game 22. Use jQuery to detect when a keyboard key has been pressed, when that happens for the first time, call nextSequence().
 
 You'll need a way to keep track of whether if the game has started or not, so you only call nextSequence() on the first keypress.
 
@@ -89,7 +88,6 @@ Firstly, the game shows the first colour in the sequence (blue). The user clicks
 Next, the game shows the next colour (red), the user has to remember the sequence is blue, red and so on and so forth.
 
 If the user messes up the sequence, then the game ends.
-
 
 You can either try to figure out how to achieve this logic by trying to write the code yourself or you can follow the challenge steps below:
 
@@ -115,12 +113,18 @@ In the next few challenges, we'll address what happens when the user get's the p
 
 ////////////////////////////////////////////////////////////////
 
-Step 8 - Game Over
-33. In the sounds folder, there is a sound called wrong.mp3, play this sound if the user got one of the answers wrong.
+Step 8 - Game Over 33. In the sounds folder, there is a sound called wrong.mp3, play this sound if the user got one of the answers wrong.
 
 34. In the styles.css file, there is a class called "game-over", apply this class to the body of the website when the user gets one of the answers wrong and then remove it after 200 milliseconds.
 
 All going well, you should end up with a flash effect:
 
-
 35. Change the h1 title to say "Game Over, Press Any Key to Restart" if the user got the answer wrong.
+
+////////////////////////////////////////////////////////////////
+
+Step 9 - Restart the Game 36. Create a new function called startOver().
+
+37. Call startOver() if the user gets the sequence wrong.
+
+38. Inside this function, you'll need to reset the values of level, gamePattern and started variables.

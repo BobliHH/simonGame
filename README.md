@@ -114,3 +114,13 @@ Now you should be able to play the game.
 In the next few challenges, we'll address what happens when the user get's the pattern wrong and how to restart the game.
 
 ////////////////////////////////////////////////////////////////
+
+Step 8 - Game Over
+33. In the sounds folder, there is a sound called wrong.mp3, play this sound if the user got one of the answers wrong.
+
+34. In the styles.css file, there is a class called "game-over", apply this class to the body of the website when the user gets one of the answers wrong and then remove it after 200 milliseconds.
+
+All going well, you should end up with a flash effect:
+
+
+35. Change the h1 title to say "Game Over, Press Any Key to Restart" if the user got the answer wrong.

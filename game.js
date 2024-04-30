@@ -1,6 +1,7 @@
 let buttonColours = ["red", "blue", "green", "yellow"];
 let gamePattern = [];
 let userClickedPattern = [];
+let randomChosenColour;
 let level = 0;
 
 $(document).one("keydown", function () {
@@ -10,12 +11,10 @@ $(document).one("keydown", function () {
 
 function nextSequence() {
   let randomNumber = Math.floor(Math.random() * 4);
-  let randomChosenColour = buttonColours[randomNumber];
-
+  randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
   console.log(randomChosenColour);
   console.log(gamePattern);
-
   // return randomChosenColour;
   animatePress(randomChosenColour);
   playSound(randomChosenColour);
@@ -30,12 +29,29 @@ function nextSequence() {
 $(".btn").click(function () {
   // alert("The button was clicked.");
   let userChosenColour = this.id;
-  console.log(userChosenColour);
-  userClickedPattern.push(userChosenColour);
-  console.log(userClickedPattern);
   playSound(userChosenColour);
   animatePress(userChosenColour);
+  console.log(userChosenColour);
+  userClickedPattern.push(userChosenColour);
+  checkAnswer(userClickedPattern.length);
+  console.log(userClickedPattern.length);
+
+  console.log(userClickedPattern);
 });
+
+function checkAnswer(currentLevel) {
+  if (gamePattern[currentLevel - 1] == userClickedPattern[currentLevel - 1]) {
+    console.log("success");
+    if (userClickedPattern.length == gamePattern.length) {
+      setTimeout(() => {
+        nextSequence();
+        userClickedPattern = [];
+      }, "1000");
+    }
+  } else {
+    console.log("wrong");
+  }
+}
 
 function playSound(name) {
   let audio = new Audio("sounds/" + name + ".mp3");

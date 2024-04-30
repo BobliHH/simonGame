@@ -52,16 +52,16 @@ function checkAnswer(currentLevel) {
     console.log("wrong");
     playSound("wrong");
     $("body").addClass("game-over");
+    $("#level-title").text("Game Over, Press Any Key to Restart ");
     setTimeout(function () {
       $("body").removeClass("game-over");
     }, 200);
-    $("#level-title").text("Game Over, Press Any Key to Restart ");
     startOver();
   }
 }
 
 function playSound(name) {
-  let audio = new Audio("sounds/" + name + ".mp3");
+  let audio = new Audio("./sounds/" + name + ".mp3");
   audio.play();
 }
 

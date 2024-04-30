@@ -5,7 +5,7 @@ let level = 0;
 
 $(document).one("keydown", function () {
   nextSequence();
-  $("h1").text("Level " + level);
+  $("#level-title").text("Level " + level);
 });
 
 function nextSequence() {
@@ -14,11 +14,13 @@ function nextSequence() {
 
   gamePattern.push(randomChosenColour);
   console.log(randomChosenColour);
+  console.log(gamePattern);
+
   // return randomChosenColour;
   animatePress(randomChosenColour);
   playSound(randomChosenColour);
   level++;
-  $("h1").text("Level " + level);
+  $("#level-title").text("Level " + level);
 }
 
 // $(".btn").on("click", function () {

@@ -6,7 +6,7 @@ let level = 0;
 
 $(document).one("keydown", function () {
   nextSequence();
-  $("#level-title").text("Level " + level);
+  // $("#level-title").text("Level " + level);
 });
 
 function nextSequence() {

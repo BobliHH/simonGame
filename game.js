@@ -51,6 +51,7 @@ function checkAnswer(currentLevel) {
   } else {
     console.log("wrong");
     playSound("wrong");
+
     $("body").addClass("game-over");
     $("#level-title").text("Game Over, Press Any Key to Restart ");
     setTimeout(function () {
@@ -75,7 +76,9 @@ function animatePress(currentColour) {
 function startOver() {
   level = 0;
   gamePattern = [];
-  location.reload();
+  setTimeout(() => {
+    location.reload();
+  }, 1000);
 }
 
 // let buttonId = $("#" + randomChosenColour);

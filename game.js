@@ -13,8 +13,8 @@ function nextSequence() {
   let randomNumber = Math.floor(Math.random() * 4);
   randomChosenColour = buttonColours[randomNumber];
   gamePattern.push(randomChosenColour);
-  console.log(randomChosenColour);
-  console.log(gamePattern);
+  // console.log(randomChosenColour);
+  // console.log(gamePattern);
   // return randomChosenColour;
   animatePress(randomChosenColour);
   playSound(randomChosenColour);
@@ -31,12 +31,12 @@ $(".btn").click(function () {
   let userChosenColour = this.id;
   playSound(userChosenColour);
   animatePress(userChosenColour);
-  console.log(userChosenColour);
+  // console.log(userChosenColour);
   userClickedPattern.push(userChosenColour);
   checkAnswer(userClickedPattern.length);
-  console.log(userClickedPattern.length);
+  // console.log(userClickedPattern.length);
 
-  console.log(userClickedPattern);
+  // console.log(userClickedPattern);
 });
 
 function checkAnswer(currentLevel) {

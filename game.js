@@ -8,6 +8,9 @@ $(document).one("keydown", function () {
   nextSequence();
   // $("#level-title").text("Level " + level);
 });
+$(".btn1").click(function () {
+  nextSequence();
+});
 
 function nextSequence() {
   let randomNumber = Math.floor(Math.random() * 4);

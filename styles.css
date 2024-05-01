@@ -67,7 +67,7 @@ body {
   box-shadow: 0 0 20px white;
   background-color: grey;
 }
-@media (max-width: 1000px) {
+/* @media (max-width: 1000px) {
   #level-title {
     visibility: hidden;
   }
@@ -80,4 +80,4 @@ body {
     color: #fef2bf;
     text-align: center;
   }
-}
+} */

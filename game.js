@@ -8,7 +8,10 @@ $(document).one("keydown", function () {
   nextSequence();
   // $("#level-title").text("Level " + level);
 });
-$(".btn1").click(function () {
+// $(".btn1").click(function () {
+//   nextSequence();
+// });
+$("#level-title").one("click", function () {
   nextSequence();
 });
 
